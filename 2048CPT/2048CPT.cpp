@@ -5,10 +5,10 @@
 #include <string>
 
 int main() {
-    // Création d'une grille vide de 4x4
+    // Grille vide de 4x4
     std::vector<std::vector<std::string>> grille(4, std::vector<std::string>(4, ""));
 
-    // Remplissage de la grille avec des chaînes de caractères
+    // Remplissage d'une case
     grille[2][2] = "2048";
 
     // Affichage de la grille avec des bordures
