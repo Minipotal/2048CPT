@@ -3,36 +3,11 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "grille.h"
 
 int main() {
-    // Grille vide de 4x4
-    std::vector<std::vector<std::string>> grille(4, std::vector<std::string>(4, ""));
-
-    // Remplissage d'une case
-    grille[2][2] = "2048";
-
-    // Affichage de la grille avec des bordures
-    for (int ligne = 0; ligne < 4; ligne++) {
-        for (int colonne = 0; colonne < 4; colonne++) {
-            std::cout << "+--------";
-        }
-        std::cout << "+" << std::endl;
-
-        for (int colonne = 0; colonne < 4; colonne++) {
-            std::cout << "| " << grille[ligne][colonne];
-            // Remplir les espaces pour que la cellule fasse 7 caractères
-            for (int i = grille[ligne][colonne].length(); i < 7; i++) {
-                std::cout << " ";
-            }
-        }
-        std::cout << "|" << std::endl;
-    }
-
-    // Fermeture de la grille
-    for (int colonne = 0; colonne < 4; colonne++) {
-        std::cout << "+--------";
-    }
-    std::cout << "+" << std::endl;
+    Grille maGrille; // Créez une instance de la classe Grille.
+    maGrille.afficher();
 
     return 0;
 }
