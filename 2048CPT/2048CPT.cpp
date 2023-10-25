@@ -6,7 +6,7 @@
 #include "grille.h"
 
 int main() {
-    Grille maGrille; // Créez une instance de la classe Grille.
+    Grille maGrille; // Création d'une instance de la classe Grille.
     maGrille.afficher();
 
     return 0;
