@@ -4,6 +4,7 @@
 #include <vector>
 #include <string>
 #include "grille.h"
+#include "detect.h"
 
 int main() {
     Grille maGrille; // Création d'une instance de la classe Grille.

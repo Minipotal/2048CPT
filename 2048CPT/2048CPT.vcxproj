@@ -130,10 +130,10 @@
     <ClCompile Include="2048CPT.cpp" />
     <ClCompile Include="grille.cpp" />
     <ClCompile Include="grille.h" />
-    <ClCompile Include="input.cpp" />
+    <ClCompile Include="detect.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="input.h" />
+    <ClInclude Include="detect.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
