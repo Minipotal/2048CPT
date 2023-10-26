@@ -7,8 +7,7 @@
 #define KEY_LEFT 75
 #define KEY_RIGHT 77
 
-int detect::keyDetect()
-{
+int detect::keyDetect() {
     bool badKey = true;
     while (badKey)
     {

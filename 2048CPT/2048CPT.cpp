@@ -9,6 +9,8 @@
 int main() {
     Grille maGrille; // Création d'une instance de la classe Grille.
     maGrille.afficher();
-
+    
+    End Gameover;
+    detect keyDetect;
     return 0;
 }

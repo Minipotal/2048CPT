@@ -128,12 +128,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2048CPT.cpp" />
+    <ClCompile Include="gameover.cpp" />
     <ClCompile Include="grille.cpp" />
     <ClCompile Include="grille.h" />
     <ClCompile Include="detect.cpp" />
+    <ClCompile Include="merge.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="detect.h" />
+    <ClInclude Include="gameover.h" />
+    <ClInclude Include="merge.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
