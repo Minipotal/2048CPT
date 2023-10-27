@@ -5,12 +5,13 @@
 #include <string>
 #include "grille.h"
 #include "detect.h"
+#include "gameover.h"
 
 int main() {
     Grille maGrille; // Création d'une instance de la classe Grille.
     maGrille.afficher();
     
-    End Gameover;
+    //End gameOver;
     detect keyDetect;
     return 0;
 }
