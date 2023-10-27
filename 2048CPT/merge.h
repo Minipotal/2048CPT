@@ -1,5 +1,4 @@
-class merge
-{
+class merge{
 public:
     int direction;
 

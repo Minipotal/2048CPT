@@ -10,8 +10,8 @@
 int main() {
     Grille maGrille; // Création d'une instance de la classe Grille.
     maGrille.afficher();
-    
-    //End gameOver;
     detect keyDetect;
+    //End gameOver;
+
     return 0;
 }
