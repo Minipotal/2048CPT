@@ -1,34 +1,51 @@
 #include <iostream>
-#include <vector>
-#include <string>
+#include <iomanip>
+#include <ctime>
+#include <cstdlib>
 
 #include "grille.h"
 
+int grid[4][4];
+Grille::Grille() {
 
-
-Grille::Grille() : grid(4, std::vector<std::string>(4, "")) {
-    grid[2][2] = "2048";
 }
 
-void Grille::afficher() {
-    for (int ligne = 0; ligne < 4; ligne++) {
-        for (int colonne = 0; colonne < 4; colonne++) {
-            std::cout << "+--------";
-        }
-        std::cout << "+" << std::endl;
 
-        for (int colonne = 0; colonne < 4; colonne++) {
-            std::cout << "| " << grid[ligne][colonne];
+void Grille::newGame() {
+    for (int i = 0; i < 4; i++)
+        for (int j = 0; j < 4; j++)
+            grid[i][j] = 0;
+    addPieces();
+}
 
-            for (int i = grid[ligne][colonne].length(); i < 7; i++) {
-                std::cout << " ";
-            }
+std::pair<int, int> generateUnoccupiedPosition() {
+    int occupied = 1, line, column;
+    while (occupied) {
+        line = rand() % 4;
+        column = rand() % 4;
+        if (grid[line][column] == 0)
+            occupied = 0;
+    }
+    return std::make_pair(line, column);
+}
+void Grille::addPieces() {
+    std::pair<int, int> pos = generateUnoccupiedPosition();
+    grid[pos.first][pos.second] = 2;
+}
+
+void Grille::printUI() {
+    system("cls");
+    for (int i = 0; i < 4; i++) {
+        std::cout << "+------+------+------+------+" << std::endl;
+        for (int j = 0; j < 4; j++) {
+            std::cout << "|";
+            if (grid[i][j] == 0)
+                std::cout << std::setw(6) << " ";
+            else
+                std::cout << std::setw(6) << grid[i][j];
         }
         std::cout << "|" << std::endl;
     }
-
-    for (int colonne = 0; colonne < 4; colonne++) {
-        std::cout << "+--------";
-    }
-    std::cout << "+" << std::endl;
+    std::cout << "+------+------+------+------+" << std::endl;
+    std::cout << "n : nouvelle partie\nl : stopper le programme\nz, q, s et d : deplacement\n";
 }

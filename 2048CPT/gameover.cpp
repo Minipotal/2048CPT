@@ -1,4 +1,6 @@
 #include "gameover.h"
+#include "grille.h"
+
 
 int End::gameOver() {
 	int i = 0;

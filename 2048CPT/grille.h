@@ -1,13 +1,10 @@
-#include <iostream>
-#include <vector>
-#include <string>
-
+#pragma once
+extern int grid[4][4];
 
 class Grille {
 public:
     Grille();
-    void afficher();
-
-private:
-    std::vector<std::vector<std::string>> grid;
+    void newGame();
+    void addPieces();
+    void printUI();
 };
