@@ -1,6 +1,6 @@
 #include "gameover.h"
 #include "grille.h"
-
+/*
 
 int End::gameOver() {
 	int i = 0;
@@ -16,3 +16,4 @@ int End::gameOver() {
 				if (grille[x][y] == grille[x - 1][y] || grille[x][y - 1] || grille[x + 1][y] || grille[x][y + 1])
 					int notOver = notOver + 1;
 }
+*/

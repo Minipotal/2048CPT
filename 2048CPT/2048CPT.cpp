@@ -27,6 +27,7 @@ int main()
         else {
             int currentDirection = commandToDir[command];
             m.applyMove(currentDirection);
+            m.checkOver();
         }
     }
     return 0;

@@ -1,4 +1,5 @@
-class End {
+/*class End {
 public:
 	int gameOver();
 };
+*/
