@@ -6,6 +6,24 @@
 #include "grille.h"
 #include "move.h"
 
+
+/*bool isGameOver(int grid[4][4]) {
+    for (int i = 0; i < 4; i++) {
+        for (int j = 0; j < 4; j++) {
+            int current = grid[i][j];
+            if (i > 0 && grid[i - 1][j] == current)
+                return false;
+            if (j > 0 && grid[i][j - 1] == current)
+                return false;
+            if (i < 3 && grid[i + 1][j] == current)
+                return false;
+            if (j < 3 && grid[i][j + 1] == current)
+                return false;
+        }
+    }
+    return true;
+}
+*/
 int main()
 {
     char commandToDir[128]{};
@@ -26,10 +44,7 @@ int main()
             break;
         else {
             int currentDirection = commandToDir[command];
-            m.applyMove(currentDirection);
-            /*m.checkOver();
-            if (int NotOver = 0)
-            return 0;*/
+            m.applyMove(currentDirection); 
         }
     }
     return 0;
