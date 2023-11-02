@@ -28,8 +28,6 @@ std::pair<int, int> generateUnoccupiedPosition() {
     }
     return std::make_pair(line, column);
 }
-
-
 void Grille::addPieces() {
     std::pair<int, int> pos = generateUnoccupiedPosition();
     grid[pos.first][pos.second] = 2;

@@ -45,19 +45,3 @@ void Movement::applyMove(int direction) {
     if (canAddPiece)
         gr.addPieces();
 }
-
-void Movement::checkOver() {
-    int temp{};
-    int notOver = 0;
-    for (int i = 0; i < 4; i++)
-        for (int j = 0; j < 4; j++)
-            if (grid[i][j] == 0)
-                temp = temp + 1;
-    if (temp == 16)
-    for (int x = 0; x < 4 ; x++)
-        for (int y = 0; y < 4 ; y++)
-            if (grid[x][y] == grid[x + 1][y] || grid[x - 1][y] || grid[x][y + 1] || grid[x][y - 1])
-                notOver = notOver + 1;
-    else;
-    notOver = 1;
-}
